@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tool-List Manager</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="./style.css">
+
+  <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="app-title"><i class="fas fa-tasks"></i>Tool-List Manager</div>
+    <div>
+      <button id="themeToggle" class="theme-toggle btn-neutral"><i class="fas fa-sun"></i></button>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Ajouter une tâche</span>
+        <button id="viewToggleBtn" class="view-toggle btn-neutral"><i class="fas fa-list"></i></button>
+      </div>
+      <div class="input-group">
+        <input type="text" id="taskInput" placeholder="Titre de la tâche...">
+        <select id="priorityInput">
+          <option value="low">Faible</option>
+          <option value="medium" selected>Moyenne</option>
+          <option value="high">Haute</option>
+        </select>
+        <input type="date" id="dueDateInput">
+      </div>
+      <div class="input-group">
+        <input type="text" id="tagInput" placeholder="Tags (séparés par virgules)">
+        <textarea id="descInput" rows="2" placeholder="Description (optionnelle)"></textarea>
+      </div>
+      <div class="input-group">
+        <button id="addBtn" class="btn-primary"><i class="fas fa-plus"></i> Ajouter</button>
+        <button id="bulkCompleteBtn" class="btn-info"><i class="fas fa-check-double"></i> Tout compléter</button>
+        <button id="clearAllBtn" class="btn-danger"><i class="fas fa-trash"></i> Effacer tout</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Filtres & options</span>
+      </div>
+      <div class="toolbar">
+        <select id="statusFilter">
+          <option value="all">Toutes</option>
+          <option value="active">Actives</option>
+          <option value="completed">Terminées</option>
+        </select>
+        <select id="priorityFilter">
+          <option value="">Toutes priorités</option>
+          <option value="high">Haute</option>
+          <option value="medium">Moyenne</option>
+          <option value="low">Faible</option>
+        </select>
+        <select id="tagFilter">
+          <option value="">Tous tags</option>
+        </select>
+        <input type="text" id="searchInput" placeholder="Recherche...">
+        <select id="sortOption">
+          <option value="createdDesc">Nouveautés</option>
+          <option value="createdAsc">Plus anciennes</option>
+          <option value="dueAsc">Échéance↑</option>
+          <option value="dueDesc">Échéance↓</option>
+        </select>
+      </div>
+    </div>
+
+    <ul id="taskList" class="task-list grid-view"></ul>
+
+    <br>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Logs d'activité</span>
+      </div>
+      <div class="log-controls">
+        <select id="logFilter">
+          <option value="all">Tous</option>
+          <option value="add">Ajout</option>
+          <option value="edit">Édition</option>
+          <option value="delete">Suppression</option>
+          <option value="complete">Complétion</option>
+        </select>
+        <input type="text" id="logSearch" placeholder="Recherche...">
+        <button id="clearLogsBtn" class="btn-danger"><i class="fas fa-trash-alt"></i></button>
+      </div>
+      <div id="logs" class="logs-container"></div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Tool-List Manager
+    <div>
+      <a href="https://github.com/Cut0x/tool-list-manager" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://valloic.dev" target="_blank"><i class="fas fa-external-link-alt"></i> valloic.dev</a>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
