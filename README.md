@@ -39,8 +39,5 @@ Tool-List Manager est une application web gratuite et open-source pour gérer vo
 - Ce projet est conçu pour être utilisé en local. Si vous souhaitez l'héberger en ligne, assurez-vous de configurer correctement un serveur web.
 - Pour toute question ou contribution, visitez le [repository GitHub](https://github.com/Cut0x/tool-list-manager).
 
-## Licence
-Ce projet est sous licence MIT. Consultez le fichier `LICENSE` pour plus de détails.
-
 ---
 &copy; 2025 Tool-List Manager
